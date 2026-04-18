@@ -1,58 +1,105 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "The Galaxy",
+    "Credits": "Created by Kevin Yee (kegyee@ucsc.edu).",
+    "InitialLocation": "Herta Space Station",
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
+        "Herta Space Station": {
+            "Body": "This is Herta Space Station, home to #83 Genius Society Member, Herta. Here, you may find many exotic artifact, coming from the various corners of the universe.",
+            "Item": "Device IX",
             "Choices": [
                 {
-                    "Text": "South",
-                    "Target": "Porter"
+                    "Text": "Trailblaze!",
+                    "Target": "Jarilo VI"
+                },
+                {
+                    "Text": "Search Around",
+                    "Action": "pickup"
                 }
             ]
         },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
+        "Jarilo VI": {
+            "Body": "This is Jarilo VI, the land is cold and barren. You find little to no living organisms, rather automatons that roam the surface.",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Kresge"
+                    "Text": "Untrailblaze?",
+                    "Target": "Herta Space Station"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
+                    "Text": "Trailblaze!",
+                    "Target": "Xianzhou"
                 }
             ]
         },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
+        "Xianzhou": {
+            "Body": "This is the Xianzhou. A fleet of ships that sails the cosmos in the shape of an arrow.",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Porter"
+                    "Text": "Untrailblaze?",
+                    "Target": "Jarilo VI"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Oakes"
+                    "Text": "Trailblaze!",
+                    "Target": "Penacony"
                 }
             ]
         },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
+        "Penacony": {
+            "Body": "Penacony, the land of Dreams. This is the ideal vacation spot for all newcomers looking for a place to visit or settle!",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
+                    "Text": "Buy Food",
+                    "Target": "rest"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Beyond"
+                    "Text": "Untrailblaze?",
+                    "Target": "Xianzhou"
+                },
+                {
+                    "Text": "Trailblaze!",
+                    "Target": "Amphoreus"
                 }
+            ]
+        },
+        "rest": {
+            "Body": "A local bakery leaks a sweet aroma that encapsulates the surrounding crowd. Out on the display are these colorful cake rolls that smell like cinnamon and vanilla.",
+            "Choices": [
+                {
+                    "Text": "Buy one",
+                    "Target": "yum"
+                },
+
+                {
+                    "Text": "Nah, I'm ok",
+                    "Target": "Penacony"
+                }
+            ]
+        },
+                "yum": {
+            "Body": "You take a bite out of the rolls and they taste exactly, as you imagine; like heaven on earth.",
+            "Choices": [
+                {
+                    "Text": "Leave the restaurant",
+                    "Target": "Penacony"
+                }
+            ]
+        },
+        "Amphoreus": {
+            "Body": "Amphoreus, The Eternal Land. The hospitality received from the Gods and citizens makes this journey a place to never forget!",
+            "Choices": [
+                {
+                    "Text": "Untrailblaze?",
+                    "Target": "Penacony"
+                },
+                {
+                    "Text": "Planarcadia",
+                    "Target": "Beyond",
+                    "Requires": "Device IX",
+                    "LockedText": "You may not traverse to Planarcadia yet, as a giant firewall has blocked the road!"
+                }   
             ]
         },
         "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
+            "Body": "Planarcadia, where your imagination can become a reality, really! You find yourself spending weeks upon months creating whatever, whomever you please!"
         }
     }
 }
